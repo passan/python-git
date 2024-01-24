@@ -1,4 +1,4 @@
-print("주석 내용 확인__")
+print("주석 내용 확인")
 
 
 #git add .\01-helloworld.py
@@ -12,3 +12,4 @@ print("주석 내용 확인__")
 # git add README.md  # README.md 파일을 스테이징 영역에 추가합니다.
 # git commit -m "first commit"  # 스테이징된 변경사항을 커밋합니다.
 # git branch -M main  # 기본 브랜치의 이름을 'main'으로 변경합니다.
+# https://github.com/passan/

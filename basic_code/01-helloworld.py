@@ -1,4 +1,5 @@
-print("주석 내용 확인")
+print("주석 내용 확")
+print("주석 내용 확2")
 
 
 #git add .\01-helloworld.py

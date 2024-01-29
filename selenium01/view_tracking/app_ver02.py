@@ -40,10 +40,10 @@ for query, target_blog_link in zip(query, target_blog_link):
                     now_rank = now_element  # 현재 순위를 now_rank 변수에 저장
                     BLOG_FOUND = True
                     break
-                print("현재랭크 못 찾음")
+                # print("현재랭크 못 찾음")
                 element = new_element
         except:
-            # print("타겟 블로그를 못 찾음 > 스크롤 하겠습니다.")
+            print("타겟 블로그를 못 찾음 > 스크롤 하겠습니다.")
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")            
             time.sleep(5)
         if BLOG_FOUND:

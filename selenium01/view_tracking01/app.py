@@ -18,6 +18,7 @@ driver.get(search_link)
 # target_blog_link = "https://blog.naver.com/zlatmgpdjtiq/223049716285"
 target_blog_link = "https://blog.naver.com/cheerfuldong/222694578203"
 link_selector = f'a[href^="{target_blog_link}"]'
+now_rank = -1
 
 try:
     element = driver.find_element(By.CSS_SELECTOR, link_selector)
@@ -44,6 +45,6 @@ for _ in range(7):
         print("타겟 블로그를 못 찾음 > 스크롤 하겠습니다.")
         # driver.execute_script("window.scrollBy(0, 100)")
         time.sleep(3)
-    print(f"{query} : 타켓 블로그의 링크를 찾았습니다.")
+    print(f"{query} / {now_rank} : 타켓 블로그의 링크를 찾았습니다.")
     
 input()

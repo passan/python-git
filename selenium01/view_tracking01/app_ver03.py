@@ -35,7 +35,6 @@ for query, target_blog_link in zip(query, target_blog_link):
         element = driver.find_element(By.CSS_SELECTOR, link_selector)
     except:
         # 웹 요소를 찾지 못하면 에러 메시지를 출력합니다.
-        print("Element not found")
         print(f"Element not found for {query} and {target_blog_link}")
         # driver.quit()
 
@@ -66,7 +65,9 @@ for query, target_blog_link in zip(query, target_blog_link):
         except:
             # 타겟 블로그를 찾지 못했다면 스크롤을 내립니다.
             print("타겟 블로그를 못 찾음 > 스크롤 하겠습니다.")
-            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")            
+            time.sleep(2)
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            # driver.execute_script("window.scrollTo(0, 10000);")            
             # 5초 동안 대기합니다.
             time.sleep(5)
         # 블로그를 찾았다면,

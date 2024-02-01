@@ -20,6 +20,6 @@ group_navigator = driver.find_element(By.CSS_SELECTOR, css_selecter)
 # 3-1. 데이터를 가져오기
 print(group_navigator.text)
 
-# 3-2. 요소를 클릭하기 
+# 3-2. 요소를 클릭하기(중앙)
 group_navigator.click()
 input()

@@ -9,11 +9,20 @@ chromedriver_autoinstaller.install()
 
 driver = webdriver.Chrome()
 
+# 웹 검색을 수행하는 함수
+def web_search(query):
+    # 여기에 웹 검색 코드를 작성합니다.
+    pass
+
 real_rank = -1
 rank = 1
+
+web_search = input("검색어를 입력하세요: ") # 사용자로부터 직접 입력을 받습니다.
+seach_query = web_search
+
 for pagingindex in range(1, 15):
     # pagingindex = 2 # for문 추가로 사용 안 함
-    seach_query = "꿀사과"
+    # seach_query = "꿀사과"
     shoping_link = f"https://msearch.shopping.naver.com/search/all?query={seach_query}&vertical=search&pagingIndex={pagingindex}"
     driver.get(shoping_link)
 
@@ -37,8 +46,8 @@ for pagingindex in range(1, 15):
         break        
     except:
         print(f"{pagingindex}페이지에서 상품 코드를 찾을 수 없습니다.")    
-print("상품 진짜 등수는 ", real_rank , "등입니다.")
-print(f"상품은 {pagingindex} 페이지의 {rank}등에 노출되고 있습니다.")
+print("상품 진짜 등수는 ", rank , "등입니다.")
+print(f"상품은 {pagingindex} 페이지의 {real_rank}등에 노출되고 있습니다.")
 
 
 input()
